@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: nginx2
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/shared-resource-warnings: "false"
 spec:
   destination:
     server: https://kubernetes.default.svc
