@@ -1,5 +1,0 @@
-resources:
-  - nginx1.yaml
-  - nginx2.yaml
-
-namespace: test2
