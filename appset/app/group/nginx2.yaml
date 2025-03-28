@@ -8,9 +8,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    kustomize:
-      namespace: test2
-    path: nginx1/overlay/dev
+    path: nginx2/overlay/dev
     repoURL: https://github.com/cla9/argocd-test
     targetRevision: main
   syncPolicy:
