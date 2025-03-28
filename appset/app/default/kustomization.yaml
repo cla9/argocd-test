@@ -1,5 +1,8 @@
 resources:
   - ../../group
+
+namePrefix: "default-"
+
 patches:
   - target:
       group: "argoproj.io"

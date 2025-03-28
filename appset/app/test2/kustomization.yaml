@@ -1,5 +1,8 @@
 resources:
   - ../../group
+
+namePrefix: "test2-"
+
 patches:
   - target:
       group: "argoproj.io"
@@ -9,4 +12,4 @@ patches:
     patch: |-
       - op: add
         path: /spec/source/kustomize/namespace
-        value: default        
+        value: test2     
