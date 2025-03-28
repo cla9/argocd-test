@@ -14,11 +14,12 @@ spec:
     repoURL: https://github.com/cla9/argocd-test
     targetRevision: main
   ignoreDifferences:
-    - group: '*'
+    - group: "*"
+      kind: "*"
       jsonPointers:
-        - /metadata/labels
-      kind: ConfigMap
+        - /metadata/labels/app.kubernetes.io~1instance
   syncPolicy:
     automated: {}
     syncOptions:
       - CreateNamespace=true
+      - RespectIgnoreDifferences=true
