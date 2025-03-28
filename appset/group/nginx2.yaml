@@ -13,6 +13,11 @@ spec:
     path: nginx2/overlay/dev
     repoURL: https://github.com/cla9/argocd-test
     targetRevision: main
+  ignoreDifferences:
+    - group: '*'
+      jsonPointers:
+        - /metadata/labels
+      kind: ConfigMap
   syncPolicy:
     automated: {}
     syncOptions:
