@@ -1,0 +1,3 @@
+resources:
+  - nginx2.yaml
+  - nginx1.yaml

@@ -1,7 +1,5 @@
 resources:
-  - ../../group/nginx1.yaml
-  - ../../group/nginx2.yaml
-
+  - ../../group
 patches:
   - target:
       group: "argoproj.io"
@@ -11,5 +9,4 @@ patches:
     patch: |-
       - op: add
         path: /spec/source/kustomize/namespace
-        value: default
-        
+        value: default        
