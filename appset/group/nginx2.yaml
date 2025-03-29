@@ -10,10 +10,11 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
+    namespace: default
   project: default
   source:
-    kustomize:
-      namespace: default
+#    kustomize:
+#      namespace: default
     path: nginx2/overlay/dev
     repoURL: https://github.com/cla9/argocd-test
     targetRevision: main

@@ -30,8 +30,11 @@ spec:
                 name: .*
               patch: |-
                 - op: add
-                  path: /spec/source/kustomize/namespace
+                  path: /spec/destination/namespace
                   value: '{{namespace}}'
+#                - op: add
+#                  path: /spec/source/kustomize/namespace
+#                  value: '{{namespace}}'
         path: appset/group
         repoURL: https://github.com/cla9/argocd-test
         targetRevision: main
