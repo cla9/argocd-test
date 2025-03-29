@@ -18,17 +18,18 @@ spec:
         namespace: '{{namespace}}'
       project: default
       source:
-#        kustomize:
-#          patches:
-#            - target:
-#                group: "argoproj.io"
-#                version: "v1alpha1"
-#                kind: "Application"
-#                name: .*
-#              patch: |-
-#                - op: add
-#                  path: /spec/source/kustomize/namespace
-#                  value: '{{namespace}}'
+        kustomize:
+          namePrefix: "{{namespace}}-"
+          patches:
+            - target:
+                group: "argoproj.io"
+                version: "v1alpha1"
+                kind: "Application"
+                name: .*
+              patch: |-
+                - op: add
+                  path: /spec/source/kustomize/namespace
+                  value: '{{namespace}}'
         path: appset/group
         repoURL: https://github.com/cla9/argocd-test
         targetRevision: main
