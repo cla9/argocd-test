@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     kustomize: {}
-    path: appset/app
+    path: appset/group
     repoURL: https://github.com/cla9/argocd-test
     targetRevision: main
   syncPolicy:
