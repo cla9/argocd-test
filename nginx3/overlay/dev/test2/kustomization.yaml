@@ -6,6 +6,6 @@ generatorOptions:
 
 configMapGenerator:
   - behavior: replace
-    name: nginx2
+    name: nginx3
     files:
       - configmap2.yaml
