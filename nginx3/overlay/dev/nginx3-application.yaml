@@ -6,9 +6,11 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
+    namespace: nginx3
   project: default
   source:
     kustomize:
+      namespace: nginx3
       patches:
         - target:
             kind: ConfigMap
