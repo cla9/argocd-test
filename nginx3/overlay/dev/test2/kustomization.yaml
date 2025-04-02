@@ -1,11 +1,8 @@
 resources:
   - ../base
 
-generatorOptions:
-  disableNameSuffixHash: true
-
-configMapGenerator:
-  - behavior: replace
-    name: nginx3
-    files:
-      - configmap2.yaml
+patches:
+  - target:
+      kind: ConfigMap
+      name: nginx3
+    path: ../base/test2/configmap2.yaml"

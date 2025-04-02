@@ -9,11 +9,11 @@ spec:
   project: default
   source:
     kustomize:
-      configMapGenerator:
-        - behavior: replace
-          name: nginx3
-          files:
-            - ./dev/test2/configmap2.yaml
+      patches:
+        - target:
+            kind: ConfigMap
+            name: nginx3
+          path: "./test2/configmap2.yaml"
     path: nginx3/overlay/dev/base
     repoURL: https://github.com/cla9/argocd-test
     targetRevision: main
