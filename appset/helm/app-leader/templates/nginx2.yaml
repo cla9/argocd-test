@@ -1,0 +1,32 @@
+{{ if .Values.nginx2.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx2
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+#  annotations:
+#    argocd.argoproj.io/shared-resource-warnings: "false"
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  project: default
+  source:
+#    kustomize:
+#      namespace: default
+    path: nginx2/overlay/dev
+    repoURL: https://github.com/cla9/argocd-test
+    targetRevision: main
+#  ignoreDifferences:
+#    - group: "*"
+#      kind: "*"
+#      jsonPointers:
+#        - /metadata/labels/app.kubernetes.io~1instance
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+#      - RespectIgnoreDifferences=true
+{{ end }}

@@ -1,0 +1,6 @@
+resources:
+  - ../../../base
+  - configmap.yaml
+images:
+  - newTag: "1.27.4"
+    name: nginx

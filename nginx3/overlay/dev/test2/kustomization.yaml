@@ -1,0 +1,11 @@
+resources:
+  - ../base
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+configMapGenerator:
+  - behavior: replace
+    name: nginx2
+    files:
+      - configmap2.yaml
