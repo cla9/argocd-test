@@ -4,3 +4,4 @@ metadata:
   name: nginx3
 data:
   spring.datasource.url: "test23"
+  spring.datasource.url3: "test23"
